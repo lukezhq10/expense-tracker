@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Income = require('../models/income');
+const Income = require('../models/incomeModel');
 
 
 const add_income = async (req, res) => {
