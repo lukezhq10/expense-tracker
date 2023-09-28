@@ -38,7 +38,7 @@ const add_expense = async (req, res) => {
 
 }
 
-const get_expenses = async (req, res) => {
+const get_expense = async (req, res) => {
     try {
         const expenses = await Expense.find().sort({createdAt: -1})
         res.status(200).json(expenses)
@@ -66,6 +66,6 @@ const delete_expense = async (req, res) => {
 
 module.exports = {
     add_expense,
-    get_expenses,
+    get_expense,
     delete_expense
 };

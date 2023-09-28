@@ -38,7 +38,7 @@ const add_income = async (req, res) => {
 
 }
 
-const get_incomes = async (req, res) => {
+const get_income = async (req, res) => {
     try {
         const incomes = await Income.find().sort({createdAt: -1})
         res.status(200).json(incomes)
@@ -66,6 +66,6 @@ const delete_income = async (req, res) => {
 
 module.exports = {
     add_income,
-    get_incomes,
+    get_income,
     delete_income
 };
